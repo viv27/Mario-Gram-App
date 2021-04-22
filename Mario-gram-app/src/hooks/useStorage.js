@@ -4,7 +4,7 @@ import {projectStorage,projectFirestore,timestamp} from "../firebase/config"
 const useStorage =(file)=>{
     const [progress,setProgress] = useState(0)
     const [error,setError] = useState(null)
-    const [url,setUrl] = useState('')
+    const [url,setUrl] = useState(null)
 
     useEffect(()=>{
         const storageRef = projectStorage.ref(file.name)
