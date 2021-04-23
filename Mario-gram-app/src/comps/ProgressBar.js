@@ -17,8 +17,7 @@ const ProgressBar = ({file,setFile})=>{
 
     return(
         <div>
-        {/* <div style ={{width:progress+'%'}} className="progress-bar"></div>
-        <CircularProgress /> */}
+        
         <LinearProgress color="secondary" />
         </div>
     )
