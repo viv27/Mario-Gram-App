@@ -1,12 +1,15 @@
 import React from 'react'
 import {useState} from 'react'
 import ProgressBar from './ProgressBar'
+import AddAPhotoTwoToneIcon from '@material-ui/icons/AddAPhotoTwoTone';
+
 
 
 const UploadForm =()=>{
 
     const [file,setFile] = useState(null)
     const [error,setError] = useState(null)
+    
 
     const types =['image/png','image/jpeg']
 
@@ -23,14 +26,18 @@ const UploadForm =()=>{
     }
 }
     return(
-        <form action="">
-            <input type="file" onChange={changeHandler}/>
-            <div className="output">
-                {error && <div className="error">{error}</div>}
-                {file && <div className="file">{file.name}</div>}
-                {file && <ProgressBar setFile ={setFile} file ={file}/>}
-            </div>
-        </form>
+        <form>
+      <label>
+        <input type="file" onChange={changeHandler} />
+        <span><AddAPhotoTwoToneIcon className="photo_icon"/></span>
+        
+      </label>
+      <div className="output">
+        { error && <div className="error">{ error }</div>}
+        { file && <div>{ file.name }</div> }
+        { file && <ProgressBar file={file} setFile={setFile} /> }
+      </div>
+    </form>
     )
 }
 export default UploadForm
