@@ -44,18 +44,31 @@ label {
   display: block;
   width: 30px;
   height: 30px;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--error);
   border-radius: 50%;
   margin: 10px auto;
   line-height: 30px;
-  color: var(--primary);
+  color: var(--error);
   font-weight: bold;
   font-size: 24px;
+}
+.switch-theme {
+  color: var(--error);
+  border: black 0px solid;
+  background: none;
+}
+.switch-theme:hover {
+  background: none;
+  color: var(--error);
+}
+.theme {
+  display: flex;
+  justify-content: flex-end;
 }
 
 label:hover {
   background: var(--primary);
-  color: white;
+  color: var(--error);
 }
 .output {
   height: 60px;
@@ -112,4 +125,20 @@ label:hover {
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   border: 3px solid white;
+}
+
+@media (max-width: 800px) {
+  .img-grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 80%;
+    max-height: max-content;
+  }
+}
+
+@media (max-width: 1200px) {
+  .theme {
+    justify-content: center;
+  }
 }
