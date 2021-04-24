@@ -6,7 +6,6 @@
   --error: #ff4a4a;
 }
 
-/* base styles & title */
 body {
   font-family: "Noto Serif";
   color: var(--secondary);
